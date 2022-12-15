@@ -27,6 +27,13 @@ class Artigo {
         return $artigo;
     }
 
+    public function remover(string $id){
+        $removerArtigo = $this->mysql->prepare('DELETE FROM artigos WHERE id = ?');
+        $removerArtigo->bind_param('s', $id);
+        $removerArtigo->execute();
+        
+    }
+
 }
 
 ?>
