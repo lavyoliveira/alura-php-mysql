@@ -11,7 +11,6 @@
 Antes de começar, verifique se você atendeu aos seguintes requisitos:
 <!---Estes são apenas requisitos de exemplo. Adicionar, duplicar ou remover conforme necessário--->
 * Escolher uma IDE de sua preferência, no caso utilizei o Visual Studio Code.
-* Caso ainda não tenha, é sugestão adicionar a extensão Live Server para melhor aproveitamento.
 * Necessária a instalação do php, xampp e quaisquer outras extensões de próprio gosto.
 
 ## 🚀 Tecnologias utilizadas e linguagens
