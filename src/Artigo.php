@@ -34,6 +34,12 @@ class Artigo {
         
     }
 
+    public function editar(string $id, string $titulo, string $conteudo): void{
+        $editarArtigo = $this->mysql->prepare('UPDATE artigos SET titulo = ?, conteudo = ? WHERE id = ?');
+        $editarArtigo->bind_param('sss', $titulo, $conteudo, $id);
+        $editarArtigo->execute();
+    }
+
 }
 
 ?>
