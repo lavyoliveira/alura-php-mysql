@@ -12,6 +12,16 @@ class Artigo {
         return $artigos;
     }
 
+    public function encontrarPorId(string $id): array{
+
+        $selecionaArtigo = $this->mysql->prepare('SELECT id, titulo, conteudo FROM artigos WHERE id = ?');
+        $selecionaArtigo->bind_param('s', $id);
+        $selecionaArtigo->execute();
+        $resultado = $selecionaArtigo->get_result();
+        $artigo = $resultado->fetch_assoc();
+        return $artigo;
+    }
+
 }
 
 ?>
